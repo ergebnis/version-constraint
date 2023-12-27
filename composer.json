@@ -3,6 +3,10 @@
   "description": "Provides abstractions of version constraints.",
   "license": "MIT",
   "type": "library",
+  "keywords": [
+    "version",
+    "constraint"
+  ],
   "authors": [
     {
       "name": "Andreas Möller",
