@@ -5,11 +5,6 @@
       <code>$generators</code>
     </PropertyTypeCoercion>
   </file>
-  <file src="test/DataGenerator/Composer/StabilityFlagGenerator.php">
-    <UnusedClass>
-      <code>StabilityFlagGenerator</code>
-    </UnusedClass>
-  </file>
   <file src="test/DataGenerator/SemanticVersionGenerator.php">
     <UnusedClass>
       <code>SemanticVersionGenerator</code>
