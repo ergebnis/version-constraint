@@ -40,8 +40,7 @@ final class TildeVersionRangeGenerator implements Test\DataGenerator\StringGener
                  */
                 new Test\DataGenerator\StringConcatenatingGenerator(
                     new Test\DataGenerator\Composer\ExactVersionConstraintGenerator(),
-                    new Test\DataGenerator\ValueGenerator(
-                        '',
+                    new Test\DataGenerator\OptionalValueGenerator(
                         '-',
                         '.',
                         '_',
@@ -62,8 +61,7 @@ final class TildeVersionRangeGenerator implements Test\DataGenerator\StringGener
                 ),
                 new Test\DataGenerator\StringConcatenatingGenerator(
                     new Test\DataGenerator\Composer\ExactVersionConstraintGenerator(),
-                    new Test\DataGenerator\ValueGenerator(
-                        '',
+                    new Test\DataGenerator\OptionalValueGenerator(
                         '-',
                         '.',
                         '_',
@@ -80,8 +78,7 @@ final class TildeVersionRangeGenerator implements Test\DataGenerator\StringGener
                         'RC',
                         'stable',
                     ),
-                    new Test\DataGenerator\ValueGenerator(
-                        '',
+                    new Test\DataGenerator\OptionalValueGenerator(
                         '.',
                         '-',
                     ),

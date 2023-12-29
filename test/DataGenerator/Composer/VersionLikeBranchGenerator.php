@@ -32,8 +32,7 @@ final class VersionLikeBranchGenerator implements Test\DataGenerator\StringGener
                 'x',
                 'X',
             ),
-            new Test\DataGenerator\ValueGenerator(
-                '',
+            new Test\DataGenerator\OptionalValueGenerator(
                 '-',
                 '.',
             ),

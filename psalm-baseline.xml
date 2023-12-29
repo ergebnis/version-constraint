@@ -5,6 +5,11 @@
       <code>$generators</code>
     </PropertyTypeCoercion>
   </file>
+  <file src="test/DataGenerator/OptionalValueGenerator.php">
+    <PropertyTypeCoercion>
+      <code>$values</code>
+    </PropertyTypeCoercion>
+  </file>
   <file src="test/DataGenerator/SemanticVersionGenerator.php">
     <UnusedClass>
       <code>SemanticVersionGenerator</code>
