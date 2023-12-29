@@ -27,9 +27,12 @@ final class VersionLikeBranchGenerator implements Test\DataGenerator\StringGener
     {
         $this->numberGenerator = new Test\DataGenerator\NumberGenerator();
         $this->suffixGenerator = new Test\DataGenerator\AffixingGenerator(
-            new Test\DataGenerator\ValueGenerator(
-                '.x',
-                '.X',
+            new Test\DataGenerator\PrefixingGenerator(
+                new Test\DataGenerator\ValueGenerator('.'),
+                new Test\DataGenerator\ValueGenerator(
+                    'x',
+                    'X',
+                ),
             ),
             new Test\DataGenerator\ValueGenerator(
                 '',
