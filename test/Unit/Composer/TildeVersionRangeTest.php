@@ -11,7 +11,7 @@ declare(strict_types=1);
  * @see https://github.com/ergebnis/version-constraint
  */
 
-namespace Composer;
+namespace Ergebnis\VersionConstraint\Test\Unit\Composer;
 
 use Ergebnis\VersionConstraint\Composer;
 use Ergebnis\VersionConstraint\Test;
