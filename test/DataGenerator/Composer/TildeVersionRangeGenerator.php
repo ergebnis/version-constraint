@@ -25,7 +25,7 @@ final class TildeVersionRangeGenerator implements Test\DataGenerator\StringGener
 
     public function __construct()
     {
-        $this->generator = new Test\DataGenerator\PrefixingGenerator(
+        $this->generator = new Test\DataGenerator\StringConcatenatingGenerator(
             new Test\DataGenerator\ValueGenerator('~'),
             new Test\DataGenerator\AggregateGenerator(
                 /**
@@ -38,60 +38,54 @@ final class TildeVersionRangeGenerator implements Test\DataGenerator\StringGener
                  * @see https://github.com/composer/semver/blob/3.4.0/tests/VersionParserTest.php#L445-L447
                  * @see https://github.com/composer/semver/blob/3.4.0/src/VersionParser.php#L39
                  */
-                new Test\DataGenerator\SuffixingGenerator(
+                new Test\DataGenerator\StringConcatenatingGenerator(
                     new Test\DataGenerator\Composer\ExactVersionConstraintGenerator(),
-                    new Test\DataGenerator\SuffixingGenerator(
-                        new Test\DataGenerator\ValueGenerator(
-                            '',
-                            '-',
-                            '.',
-                            '_',
-                        ),
-                        new Test\DataGenerator\ValueGenerator(
-                            'a',
-                            'alpha',
-                            'b',
-                            'beta',
-                            'dev',
-                            'p',
-                            'patch',
-                            'pl',
-                            'rc',
-                            'RC',
-                            'stable',
-                        ),
+                    new Test\DataGenerator\ValueGenerator(
+                        '',
+                        '-',
+                        '.',
+                        '_',
+                    ),
+                    new Test\DataGenerator\ValueGenerator(
+                        'a',
+                        'alpha',
+                        'b',
+                        'beta',
+                        'dev',
+                        'p',
+                        'patch',
+                        'pl',
+                        'rc',
+                        'RC',
+                        'stable',
                     ),
                 ),
-                new Test\DataGenerator\SuffixingGenerator(
+                new Test\DataGenerator\StringConcatenatingGenerator(
                     new Test\DataGenerator\Composer\ExactVersionConstraintGenerator(),
-                    new Test\DataGenerator\AffixingGenerator(
-                        new Test\DataGenerator\ValueGenerator(
-                            '',
-                            '-',
-                            '.',
-                            '_',
-                        ),
-                        new Test\DataGenerator\ValueGenerator(
-                            'a',
-                            'alpha',
-                            'b',
-                            'beta',
-                            'p',
-                            'patch',
-                            'pl',
-                            'rc',
-                            'RC',
-                            'stable',
-                        ),
-                        new Test\DataGenerator\PrefixingGenerator(
-                            new Test\DataGenerator\ValueGenerator(
-                                '',
-                                '.',
-                                '-',
-                            ),
-                            new Test\DataGenerator\NumberGenerator(),
-                        ),
+                    new Test\DataGenerator\ValueGenerator(
+                        '',
+                        '-',
+                        '.',
+                        '_',
                     ),
+                    new Test\DataGenerator\ValueGenerator(
+                        'a',
+                        'alpha',
+                        'b',
+                        'beta',
+                        'p',
+                        'patch',
+                        'pl',
+                        'rc',
+                        'RC',
+                        'stable',
+                    ),
+                    new Test\DataGenerator\ValueGenerator(
+                        '',
+                        '.',
+                        '-',
+                    ),
+                    new Test\DataGenerator\NumberGenerator(),
                 ),
                 /**
                  * @see https://github.com/composer/semver/blob/3.4.0/tests/VersionParserTest.php#L448-L451

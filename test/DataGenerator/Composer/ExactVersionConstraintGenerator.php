@@ -24,7 +24,7 @@ final class ExactVersionConstraintGenerator implements Test\DataGenerator\String
 
     public function __construct()
     {
-        $this->generator = new Test\DataGenerator\PrefixingGenerator(
+        $this->generator = new Test\DataGenerator\StringConcatenatingGenerator(
             new Test\DataGenerator\ValueGenerator(
                 '',
                 'v',

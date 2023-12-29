@@ -24,7 +24,7 @@ final class LessThanVersionRangeGenerator implements Test\DataGenerator\StringGe
 
     public function __construct()
     {
-        $this->generator = new Test\DataGenerator\PrefixingGenerator(
+        $this->generator = new Test\DataGenerator\StringConcatenatingGenerator(
             new Test\DataGenerator\ValueGenerator('<'),
             new ExactVersionConstraintGenerator(),
         );

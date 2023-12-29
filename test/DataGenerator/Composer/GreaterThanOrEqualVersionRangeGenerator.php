@@ -24,7 +24,7 @@ final class GreaterThanOrEqualVersionRangeGenerator implements Test\DataGenerato
 
     public function __construct()
     {
-        $this->generator = new Test\DataGenerator\PrefixingGenerator(
+        $this->generator = new Test\DataGenerator\StringConcatenatingGenerator(
             new Test\DataGenerator\ValueGenerator('>='),
             new ExactVersionConstraintGenerator(),
         );

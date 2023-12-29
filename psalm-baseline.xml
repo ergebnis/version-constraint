@@ -10,6 +10,11 @@
       <code>SemanticVersionGenerator</code>
     </UnusedClass>
   </file>
+  <file src="test/DataGenerator/StringConcatenatingGenerator.php">
+    <PropertyNotSetInConstructor>
+      <code>$secondGenerator</code>
+    </PropertyNotSetInConstructor>
+  </file>
   <file src="test/DataGenerator/ValueGenerator.php">
     <PropertyTypeCoercion>
       <code>$values</code>
