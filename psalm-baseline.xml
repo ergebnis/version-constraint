@@ -1,2 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="5.18.0@b113f3ed0259fd6e212d87c3df80eec95a6abf19"/>
+<files psalm-version="5.18.0@b113f3ed0259fd6e212d87c3df80eec95a6abf19">
+  <file src="test/DataGenerator/AggregateGenerator.php">
+    <PropertyTypeCoercion>
+      <code>$generators</code>
+    </PropertyTypeCoercion>
+  </file>
+  <file src="test/DataGenerator/Composer/StabilityFlagGenerator.php">
+    <UnusedClass>
+      <code>StabilityFlagGenerator</code>
+    </UnusedClass>
+  </file>
+  <file src="test/DataGenerator/Composer/TildeVersionRangeGenerator.php">
+    <MixedArgument>
+      <code>$otherValue</code>
+      <code>$otherValue</code>
+      <code>$otherValue</code>
+      <code>$valuesWithMajor</code>
+      <code>$valuesWithMajorAndMinor</code>
+      <code>$valuesWithMajorMinorAndPatch</code>
+      <code>$valuesWithMajorMinorPatchAndFourth</code>
+    </MixedArgument>
+    <MixedAssignment>
+      <code>$otherValue</code>
+      <code>$otherValue</code>
+      <code>$otherValue</code>
+    </MixedAssignment>
+    <UndefinedVariable>
+      <code>$valuesWithMajor</code>
+      <code>$valuesWithMajorAndMinor</code>
+      <code>$valuesWithMajorMinorAndPatch</code>
+      <code>$valuesWithMajorMinorPatchAndFourth</code>
+    </UndefinedVariable>
+    <UnusedMethod>
+      <code>foo</code>
+    </UnusedMethod>
+  </file>
+  <file src="test/DataGenerator/SemanticVersionGenerator.php">
+    <UnusedClass>
+      <code>SemanticVersionGenerator</code>
+    </UnusedClass>
+  </file>
+  <file src="test/DataGenerator/ValueGenerator.php">
+    <PropertyTypeCoercion>
+      <code>$values</code>
+    </PropertyTypeCoercion>
+  </file>
+  <file src="test/DataProvider/Composer/CaretVersionRangeProvider.php">
+    <PossiblyUnusedMethod>
+      <code>valid</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="test/DataProvider/Composer/ExactVersionConstraintProvider.php">
+    <PossiblyUnusedMethod>
+      <code>valid</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="test/DataProvider/Composer/GreaterThanOrEqualVersionRangeProvider.php">
+    <PossiblyUnusedMethod>
+      <code>valid</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="test/DataProvider/Composer/GreaterThanVersionRangeProvider.php">
+    <PossiblyUnusedMethod>
+      <code>valid</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="test/DataProvider/Composer/HyphenatedVersionRangeProvider.php">
+    <PossiblyUnusedMethod>
+      <code>valid</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="test/DataProvider/Composer/LessThanOrEqualVersionRangeProvider.php">
+    <PossiblyUnusedMethod>
+      <code>valid</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="test/DataProvider/Composer/LessThanVersionRangeProvider.php">
+    <PossiblyUnusedMethod>
+      <code>valid</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="test/DataProvider/Composer/TildeVersionRangeProvider.php">
+    <PossiblyUnusedMethod>
+      <code>valid</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="test/DataProvider/Composer/WildCardVersionRangeProvider.php">
+    <PossiblyUnusedMethod>
+      <code>valid</code>
+    </PossiblyUnusedMethod>
+  </file>
+</files>

@@ -24,7 +24,25 @@ composer require ergebnis/version-constraint
 
 ## Usage
 
-💡 This is a great place for showing a few usage examples!
+This project comes with the following components:
+
+- [`Ergebnis\VersionConstraint\Composer\TildeVersionRange`](#composertildeversionrange)
+
+### `Composer\TildeVersionRange`
+
+#### Create a `Composer\TildeVersionRange` from a string
+
+```php
+<?php
+
+declare(strict_types=1);
+
+use Ergebnis\VersionConstraint;
+
+$versionConstraint = VersionConstraint\Composer\TildeVersionRange::fromString('~1.0.0');
+
+echo $versionConstraint->toString(); // ~1.0.0
+```
 
 ## Changelog
 
