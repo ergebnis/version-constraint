@@ -13,12 +13,12 @@ declare(strict_types=1);
 
 namespace Ergebnis\VersionConstraint\Test\DataGenerator\Composer;
 
-use Ergebnis\VersionConstraint\Test;
+use Ergebnis\DataGenerator;
 
 /**
  * @see https://getcomposer.org/doc/articles/versions.md#hyphenated-version-range-
  */
-final class HyphenatedVersionRangeGenerator implements Test\DataGenerator\StringGenerator
+final class HyphenatedVersionRangeGenerator implements DataGenerator\StringGenerator
 {
     private readonly ExactVersionConstraintGenerator $exactVersionConstraintGenerator;
 

@@ -13,19 +13,20 @@ declare(strict_types=1);
 
 namespace Ergebnis\VersionConstraint\Test\DataGenerator\Composer;
 
+use Ergebnis\DataGenerator;
 use Ergebnis\VersionConstraint\Test;
 
 /**
  * @see https://getcomposer.org/doc/articles/versions.md#exact-version-constraint
  */
-final class CaretVersionRangeGenerator implements Test\DataGenerator\StringGenerator
+final class CaretVersionRangeGenerator implements DataGenerator\StringGenerator
 {
-    private readonly Test\DataGenerator\StringGenerator $generator;
+    private readonly DataGenerator\StringGenerator $generator;
 
     public function __construct()
     {
-        $this->generator = new Test\DataGenerator\StringConcatenatingGenerator(
-            new Test\DataGenerator\ValueGenerator('^'),
+        $this->generator = new DataGenerator\ConcatenatingValueGenerator(
+            new DataGenerator\ValueGenerator('^'),
             new Test\DataGenerator\Composer\ExactVersionConstraintGenerator(),
         );
     }

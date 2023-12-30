@@ -13,12 +13,13 @@ declare(strict_types=1);
 
 namespace Ergebnis\VersionConstraint\Test\DataGenerator\Composer;
 
+use Ergebnis\DataGenerator;
 use Ergebnis\VersionConstraint\Test;
 
 /**
  * @see https://getcomposer.org/doc/articles/versions.md#wildcard-version-range-
  */
-final class WildCardVersionRangeGenerator implements Test\DataGenerator\StringGenerator
+final class WildCardVersionRangeGenerator implements DataGenerator\StringGenerator
 {
     private readonly Test\DataGenerator\NumberGenerator $numberGenerator;
 

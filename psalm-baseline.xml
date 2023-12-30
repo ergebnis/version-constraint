@@ -1,29 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <files psalm-version="5.18.0@b113f3ed0259fd6e212d87c3df80eec95a6abf19">
-  <file src="test/DataGenerator/AggregateGenerator.php">
-    <PropertyTypeCoercion>
-      <code>$generators</code>
-    </PropertyTypeCoercion>
-  </file>
-  <file src="test/DataGenerator/OptionalValueGenerator.php">
-    <PropertyTypeCoercion>
-      <code>$values</code>
-    </PropertyTypeCoercion>
-  </file>
   <file src="test/DataGenerator/SemanticVersionGenerator.php">
     <UnusedClass>
       <code>SemanticVersionGenerator</code>
     </UnusedClass>
-  </file>
-  <file src="test/DataGenerator/StringConcatenatingGenerator.php">
-    <PropertyNotSetInConstructor>
-      <code>$secondGenerator</code>
-    </PropertyNotSetInConstructor>
-  </file>
-  <file src="test/DataGenerator/ValueGenerator.php">
-    <PropertyTypeCoercion>
-      <code>$values</code>
-    </PropertyTypeCoercion>
   </file>
   <file src="test/DataProvider/Composer/CaretVersionRangeProvider.php">
     <PossiblyUnusedMethod>

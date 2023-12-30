@@ -13,6 +13,7 @@ declare(strict_types=1);
 
 namespace Ergebnis\VersionConstraint\Test\DataProvider\Composer;
 
+use Ergebnis\DataGenerator;
 use Ergebnis\VersionConstraint\Test;
 
 final class GreaterThanOrEqualVersionRangeProvider
@@ -29,7 +30,7 @@ final class GreaterThanOrEqualVersionRangeProvider
         }
     }
 
-    private static function greaterThanOrEqualVersionRangeGenerator(): Test\DataGenerator\StringGenerator
+    private static function greaterThanOrEqualVersionRangeGenerator(): DataGenerator\StringGenerator
     {
         return new Test\DataGenerator\Composer\VersionConstraintParsingGenerator(new Test\DataGenerator\Composer\GreaterThanOrEqualVersionRangeGenerator());
     }

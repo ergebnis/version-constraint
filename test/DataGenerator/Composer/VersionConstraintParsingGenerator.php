@@ -14,13 +14,13 @@ declare(strict_types=1);
 namespace Ergebnis\VersionConstraint\Test\DataGenerator\Composer;
 
 use Composer\Semver;
-use Ergebnis\VersionConstraint\Test;
+use Ergebnis\DataGenerator;
 
-final class VersionConstraintParsingGenerator implements Test\DataGenerator\StringGenerator
+final class VersionConstraintParsingGenerator implements DataGenerator\StringGenerator
 {
     private readonly Semver\VersionParser $versionParser;
 
-    public function __construct(private readonly Test\DataGenerator\StringGenerator $versionConstraintGenerator)
+    public function __construct(private readonly DataGenerator\StringGenerator $versionConstraintGenerator)
     {
         $this->versionParser = new Semver\VersionParser();
     }
