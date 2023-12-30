@@ -13,21 +13,22 @@ declare(strict_types=1);
 
 namespace Ergebnis\VersionConstraint\Test\DataGenerator\Composer;
 
+use Ergebnis\DataGenerator;
 use Ergebnis\VersionConstraint\Test;
 
 /**
  * @see https://getcomposer.org/doc/articles/versions.md#tilde-version-range-
  * @see https://github.com/composer/semver/blob/3.4.0/tests/VersionParserTest.php#L430-L453
  */
-final class TildeVersionRangeGenerator implements Test\DataGenerator\StringGenerator
+final class TildeVersionRangeGenerator implements DataGenerator\StringGenerator
 {
-    private readonly Test\DataGenerator\StringGenerator $generator;
+    private readonly DataGenerator\StringGenerator $generator;
 
     public function __construct()
     {
-        $this->generator = new Test\DataGenerator\StringConcatenatingGenerator(
-            new Test\DataGenerator\ValueGenerator('~'),
-            new Test\DataGenerator\AggregateGenerator(
+        $this->generator = new DataGenerator\ConcatenatingValueGenerator(
+            new DataGenerator\ValueGenerator('~'),
+            new DataGenerator\SequentialValueGenerator(
                 /**
                  * @see https://github.com/composer/semver/blob/3.4.0/tests/VersionParserTest.php#L433-L438
                  */
@@ -38,14 +39,14 @@ final class TildeVersionRangeGenerator implements Test\DataGenerator\StringGener
                  * @see https://github.com/composer/semver/blob/3.4.0/tests/VersionParserTest.php#L445-L447
                  * @see https://github.com/composer/semver/blob/3.4.0/src/VersionParser.php#L39
                  */
-                new Test\DataGenerator\StringConcatenatingGenerator(
+                new DataGenerator\ConcatenatingValueGenerator(
                     new Test\DataGenerator\Composer\ExactVersionConstraintGenerator(),
-                    new Test\DataGenerator\OptionalValueGenerator(
+                    new DataGenerator\OptionalValueGenerator(
                         '-',
                         '.',
                         '_',
                     ),
-                    new Test\DataGenerator\ValueGenerator(
+                    new DataGenerator\ValueGenerator(
                         'a',
                         'alpha',
                         'b',
@@ -59,14 +60,14 @@ final class TildeVersionRangeGenerator implements Test\DataGenerator\StringGener
                         'stable',
                     ),
                 ),
-                new Test\DataGenerator\StringConcatenatingGenerator(
+                new DataGenerator\ConcatenatingValueGenerator(
                     new Test\DataGenerator\Composer\ExactVersionConstraintGenerator(),
-                    new Test\DataGenerator\OptionalValueGenerator(
+                    new DataGenerator\OptionalValueGenerator(
                         '-',
                         '.',
                         '_',
                     ),
-                    new Test\DataGenerator\ValueGenerator(
+                    new DataGenerator\ValueGenerator(
                         'a',
                         'alpha',
                         'b',
@@ -78,7 +79,7 @@ final class TildeVersionRangeGenerator implements Test\DataGenerator\StringGener
                         'RC',
                         'stable',
                     ),
-                    new Test\DataGenerator\OptionalValueGenerator(
+                    new DataGenerator\OptionalValueGenerator(
                         '.',
                         '-',
                     ),

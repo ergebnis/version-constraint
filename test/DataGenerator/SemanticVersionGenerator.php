@@ -13,9 +13,10 @@ declare(strict_types=1);
 
 namespace Ergebnis\VersionConstraint\Test\DataGenerator;
 
+use Ergebnis\DataGenerator;
 use Ergebnis\VersionConstraint\Test;
 
-final class SemanticVersionGenerator implements Test\DataGenerator\StringGenerator
+final class SemanticVersionGenerator implements DataGenerator\StringGenerator
 {
     private readonly Test\DataGenerator\NumberGenerator $numberGenerator;
 

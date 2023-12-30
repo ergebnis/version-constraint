@@ -13,6 +13,7 @@ declare(strict_types=1);
 
 namespace Ergebnis\VersionConstraint\Test\DataProvider\Composer;
 
+use Ergebnis\DataGenerator;
 use Ergebnis\VersionConstraint\Test;
 
 final class ExactVersionConstraintProvider
@@ -29,7 +30,7 @@ final class ExactVersionConstraintProvider
         }
     }
 
-    private static function exactVersionConstraintGenerator(): Test\DataGenerator\StringGenerator
+    private static function exactVersionConstraintGenerator(): DataGenerator\StringGenerator
     {
         return new Test\DataGenerator\Composer\VersionConstraintParsingGenerator(new Test\DataGenerator\Composer\ExactVersionConstraintGenerator());
     }

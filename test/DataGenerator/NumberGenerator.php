@@ -13,13 +13,15 @@ declare(strict_types=1);
 
 namespace Ergebnis\VersionConstraint\Test\DataGenerator;
 
-final class NumberGenerator implements StringGenerator
+use Ergebnis\DataGenerator;
+
+final class NumberGenerator implements DataGenerator\StringGenerator
 {
-    private readonly ValueGenerator $valueGenerator;
+    private readonly DataGenerator\StringGenerator $valueGenerator;
 
     public function __construct()
     {
-        $this->valueGenerator = new ValueGenerator(
+        $this->valueGenerator = new DataGenerator\ValueGenerator(
             '0',
             '123',
         );

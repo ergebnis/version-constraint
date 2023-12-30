@@ -13,30 +13,31 @@ declare(strict_types=1);
 
 namespace Ergebnis\VersionConstraint\Test\DataGenerator\Composer;
 
+use Ergebnis\DataGenerator;
 use Ergebnis\VersionConstraint\Test;
 
 /**
  * @see https://getcomposer.org/doc/articles/versions.md#branches
  */
-final class VersionLikeBranchGenerator implements Test\DataGenerator\StringGenerator
+final class VersionLikeBranchGenerator implements DataGenerator\StringGenerator
 {
     private readonly Test\DataGenerator\NumberGenerator $numberGenerator;
-    private readonly Test\DataGenerator\StringGenerator $suffixGenerator;
+    private readonly DataGenerator\StringGenerator $suffixGenerator;
 
     public function __construct()
     {
         $this->numberGenerator = new Test\DataGenerator\NumberGenerator();
-        $this->suffixGenerator = new Test\DataGenerator\StringConcatenatingGenerator(
-            new Test\DataGenerator\ValueGenerator('.'),
-            new Test\DataGenerator\ValueGenerator(
+        $this->suffixGenerator = new DataGenerator\ConcatenatingValueGenerator(
+            new DataGenerator\ValueGenerator('.'),
+            new DataGenerator\ValueGenerator(
                 'x',
                 'X',
             ),
-            new Test\DataGenerator\OptionalValueGenerator(
+            new DataGenerator\OptionalValueGenerator(
                 '-',
                 '.',
             ),
-            new Test\DataGenerator\ValueGenerator('dev'),
+            new DataGenerator\ValueGenerator('dev'),
         );
     }
 
