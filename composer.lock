@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2a5c2ca883546a3a690a93540b79839b",
+    "content-hash": "4b94609124e8392602dbfd6d403d3d7c",
     "packages": [],
     "packages-dev": [
         {
@@ -1264,37 +1264,43 @@
         },
         {
             "name": "ergebnis/data-generator",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ergebnis/data-generator.git",
-                "reference": "052cb2b8db76c83223e48c7bc0a8fe2dc234f3a8"
+                "reference": "c1aa564b426ee97efd2cf7c1dfa269ea3e4f0a8f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ergebnis/data-generator/zipball/052cb2b8db76c83223e48c7bc0a8fe2dc234f3a8",
-                "reference": "052cb2b8db76c83223e48c7bc0a8fe2dc234f3a8",
+                "url": "https://api.github.com/repos/ergebnis/data-generator/zipball/c1aa564b426ee97efd2cf7c1dfa269ea3e4f0a8f",
+                "reference": "c1aa564b426ee97efd2cf7c1dfa269ea3e4f0a8f",
                 "shasum": ""
             },
             "require": {
-                "php": "~8.1.0 || ~8.2.0 || ~8.3.0"
+                "php": "~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0"
             },
             "require-dev": {
-                "ergebnis/composer-normalize": "^2.41.1",
-                "ergebnis/data-provider": "^3.2.0",
-                "ergebnis/license": "^2.4.0",
-                "ergebnis/php-cs-fixer-config": "^6.17.0",
-                "ergebnis/phpunit-slow-test-detector": "^2.9.0",
-                "fakerphp/faker": "^1.23.0",
-                "infection/infection": "~0.27.9",
-                "phpunit/phpunit": "^10.5.5",
-                "psalm/plugin-phpunit": "~0.18.4",
-                "rector/rector": "~0.18.13",
-                "roave/backward-compatibility-check": "^8.6.0",
-                "vimeo/psalm": "^5.18.0"
+                "ergebnis/composer-normalize": "^2.44.0",
+                "ergebnis/data-provider": "^3.4.0",
+                "ergebnis/license": "^2.6.0",
+                "ergebnis/php-cs-fixer-config": "^6.37.0",
+                "ergebnis/phpunit-slow-test-detector": "^2.16.1",
+                "fakerphp/faker": "^1.24.0",
+                "infection/infection": "~0.27.11",
+                "phpstan/extension-installer": "^1.4.3",
+                "phpstan/phpstan": "^1.12.10",
+                "phpstan/phpstan-deprecation-rules": "^1.2.1",
+                "phpstan/phpstan-phpunit": "^1.4.0",
+                "phpstan/phpstan-strict-rules": "^1.6.1",
+                "phpunit/phpunit": "^10.5.25",
+                "rector/rector": "^1.2.10",
+                "roave/backward-compatibility-check": "^8.6.0"
             },
             "type": "library",
             "extra": {
+                "branch-alias": {
+                    "dev-main": "1.1-dev"
+                },
                 "composer-normalize": {
                     "indent-size": 2,
                     "indent-style": "space"
@@ -1323,7 +1329,7 @@
                 "security": "https://github.com/ergebnis/data-generator/blob/main/.github/SECURITY.md",
                 "source": "https://github.com/ergebnis/data-generator"
             },
-            "time": "2023-12-30T20:28:21+00:00"
+            "time": "2024-11-18T12:10:01+00:00"
         },
         {
             "name": "ergebnis/data-provider",
