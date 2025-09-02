@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bf86a26e2a07371ff7f31b2b28d764be",
+    "content-hash": "5268f0bc6cbf8ab405dcf1c5ef13d87c",
     "packages": [],
     "packages-dev": [
         {
@@ -1267,28 +1267,28 @@
         },
         {
             "name": "ergebnis/data-generator",
-            "version": "1.1.0",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ergebnis/data-generator.git",
-                "reference": "c1aa564b426ee97efd2cf7c1dfa269ea3e4f0a8f"
+                "reference": "608944fab2d505a912cd35759c98f0078b0a6fb5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ergebnis/data-generator/zipball/c1aa564b426ee97efd2cf7c1dfa269ea3e4f0a8f",
-                "reference": "c1aa564b426ee97efd2cf7c1dfa269ea3e4f0a8f",
+                "url": "https://api.github.com/repos/ergebnis/data-generator/zipball/608944fab2d505a912cd35759c98f0078b0a6fb5",
+                "reference": "608944fab2d505a912cd35759c98f0078b0a6fb5",
                 "shasum": ""
             },
             "require": {
-                "php": "~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0"
+                "php": "~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0 || ~8.5.0"
             },
             "require-dev": {
-                "ergebnis/composer-normalize": "^2.44.0",
+                "ergebnis/composer-normalize": "^2.45.0",
                 "ergebnis/data-provider": "^3.4.0",
                 "ergebnis/license": "^2.6.0",
-                "ergebnis/php-cs-fixer-config": "^6.37.0",
-                "ergebnis/phpunit-slow-test-detector": "^2.16.1",
-                "fakerphp/faker": "^1.24.0",
+                "ergebnis/php-cs-fixer-config": "^6.44.0",
+                "ergebnis/phpunit-slow-test-detector": "^2.19.0",
+                "fakerphp/faker": "^1.24.1",
                 "infection/infection": "~0.27.11",
                 "phpstan/extension-installer": "^1.4.3",
                 "phpstan/phpstan": "^1.12.10",
@@ -1332,7 +1332,7 @@
                 "security": "https://github.com/ergebnis/data-generator/blob/main/.github/SECURITY.md",
                 "source": "https://github.com/ergebnis/data-generator"
             },
-            "time": "2024-11-18T12:10:01+00:00"
+            "time": "2025-08-19T11:09:43+00:00"
         },
         {
             "name": "ergebnis/data-provider",
