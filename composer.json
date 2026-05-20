@@ -30,14 +30,18 @@
     "ergebnis/data-provider": "^3.6.0",
     "ergebnis/license": "^2.7.0",
     "ergebnis/php-cs-fixer-config": "^6.62.1",
+    "ergebnis/phpstan-rules": "^2.13.1",
     "ergebnis/phpunit-slow-test-detector": "^2.24.0",
     "ergebnis/rector-rules": "^1.18.1",
     "fakerphp/faker": "^1.24.1",
     "infection/infection": "~0.27.11",
+    "phpstan/extension-installer": "^1.4.3",
+    "phpstan/phpstan": "^2.1.55",
+    "phpstan/phpstan-deprecation-rules": "^2.0.4",
+    "phpstan/phpstan-phpunit": "^2.0.16",
+    "phpstan/phpstan-strict-rules": "^2.0.11",
     "phpunit/phpunit": "^10.5.62",
-    "psalm/plugin-phpunit": "~0.19.0",
-    "rector/rector": "^2.4.3",
-    "vimeo/psalm": "^5.26.1"
+    "rector/rector": "^2.4.3"
   },
   "autoload": {
     "psr-4": {
@@ -53,7 +57,8 @@
     "allow-plugins": {
       "composer/package-versions-deprecated": true,
       "ergebnis/composer-normalize": true,
-      "infection/extension-installer": true
+      "infection/extension-installer": true,
+      "phpstan/extension-installer": true
     },
     "audit": {
       "abandoned": "report"
