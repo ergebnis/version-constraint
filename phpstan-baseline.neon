@@ -1,0 +1,7 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Class "Ergebnis\\VersionConstraint\\Composer\\Exception\\InvalidTildeVersionRange" is not allowed to extend "InvalidArgumentException"\.$#'
+			identifier: ergebnis.noExtends
+			count: 1
+			path: src/Composer/Exception/InvalidTildeVersionRange.php
