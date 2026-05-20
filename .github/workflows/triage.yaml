@@ -3,6 +3,7 @@
 name: "Triage"
 
 on: # yamllint disable-line rule:truthy
+  # zizmor: ignore[dangerous-triggers] -- labelling pull requests based on the branch name
   pull_request_target:
     types:
       - "opened"
