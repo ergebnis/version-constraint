@@ -14,7 +14,7 @@ declare(strict_types=1);
 namespace Ergebnis\VersionConstraint\Test\DataProvider\Composer;
 
 use Ergebnis\DataGenerator;
-use Ergebnis\VersionConstraint\Test;
+use Ergebnis\VersionConstraint;
 
 final class CaretVersionRangeProvider
 {
@@ -32,6 +32,6 @@ final class CaretVersionRangeProvider
 
     private static function caretVersionRangeGenerator(): DataGenerator\StringGenerator
     {
-        return new Test\DataGenerator\Composer\VersionConstraintParsingGenerator(new Test\DataGenerator\Composer\CaretVersionRangeGenerator());
+        return new VersionConstraint\Test\DataGenerator\Composer\VersionConstraintParsingGenerator(new VersionConstraint\Test\DataGenerator\Composer\CaretVersionRangeGenerator());
     }
 }

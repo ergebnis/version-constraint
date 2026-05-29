@@ -14,7 +14,7 @@ declare(strict_types=1);
 namespace Ergebnis\VersionConstraint\Test\DataProvider\Composer;
 
 use Ergebnis\DataGenerator;
-use Ergebnis\VersionConstraint\Test;
+use Ergebnis\VersionConstraint;
 
 final class WildCardVersionRangeProvider
 {
@@ -32,6 +32,6 @@ final class WildCardVersionRangeProvider
 
     private static function wildCardVersionRangeGenerator(): DataGenerator\StringGenerator
     {
-        return new Test\DataGenerator\Composer\VersionConstraintParsingGenerator(new Test\DataGenerator\Composer\WildCardVersionRangeGenerator());
+        return new VersionConstraint\Test\DataGenerator\Composer\VersionConstraintParsingGenerator(new VersionConstraint\Test\DataGenerator\Composer\WildCardVersionRangeGenerator());
     }
 }

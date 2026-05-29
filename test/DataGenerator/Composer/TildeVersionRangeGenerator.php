@@ -14,7 +14,7 @@ declare(strict_types=1);
 namespace Ergebnis\VersionConstraint\Test\DataGenerator\Composer;
 
 use Ergebnis\DataGenerator;
-use Ergebnis\VersionConstraint\Test;
+use Ergebnis\VersionConstraint;
 
 /**
  * @see https://getcomposer.org/doc/articles/versions.md#tilde-version-range-
@@ -32,7 +32,7 @@ final class TildeVersionRangeGenerator implements DataGenerator\StringGenerator
                 /**
                  * @see https://github.com/composer/semver/blob/3.4.0/tests/VersionParserTest.php#L433-L438
                  */
-                new Test\DataGenerator\Composer\ExactVersionConstraintGenerator(),
+                new VersionConstraint\Test\DataGenerator\Composer\ExactVersionConstraintGenerator(),
                 /**
                  * @see https://github.com/composer/semver/blob/3.4.0/tests/VersionParserTest.php#L439
                  * @see https://github.com/composer/semver/blob/3.4.0/tests/VersionParserTest.php#L442-L443
@@ -40,7 +40,7 @@ final class TildeVersionRangeGenerator implements DataGenerator\StringGenerator
                  * @see https://github.com/composer/semver/blob/3.4.0/src/VersionParser.php#L39
                  */
                 new DataGenerator\ConcatenatingValueGenerator(
-                    new Test\DataGenerator\Composer\ExactVersionConstraintGenerator(),
+                    new VersionConstraint\Test\DataGenerator\Composer\ExactVersionConstraintGenerator(),
                     new DataGenerator\OptionalValueGenerator(
                         '-',
                         '.',
@@ -61,7 +61,7 @@ final class TildeVersionRangeGenerator implements DataGenerator\StringGenerator
                     ),
                 ),
                 new DataGenerator\ConcatenatingValueGenerator(
-                    new Test\DataGenerator\Composer\ExactVersionConstraintGenerator(),
+                    new VersionConstraint\Test\DataGenerator\Composer\ExactVersionConstraintGenerator(),
                     new DataGenerator\OptionalValueGenerator(
                         '-',
                         '.',
@@ -83,12 +83,12 @@ final class TildeVersionRangeGenerator implements DataGenerator\StringGenerator
                         '.',
                         '-',
                     ),
-                    new Test\DataGenerator\NumberGenerator(),
+                    new VersionConstraint\Test\DataGenerator\NumberGenerator(),
                 ),
                 /**
                  * @see https://github.com/composer/semver/blob/3.4.0/tests/VersionParserTest.php#L448-L451
                  */
-                new VersionLikeBranchGenerator(),
+                new VersionConstraint\Test\DataGenerator\Composer\VersionLikeBranchGenerator(),
             ),
         );
     }

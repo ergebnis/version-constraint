@@ -14,7 +14,7 @@ declare(strict_types=1);
 namespace Ergebnis\VersionConstraint\Test\DataProvider\Composer;
 
 use Ergebnis\DataGenerator;
-use Ergebnis\VersionConstraint\Test;
+use Ergebnis\VersionConstraint;
 
 final class HyphenatedVersionRangeProvider
 {
@@ -32,6 +32,6 @@ final class HyphenatedVersionRangeProvider
 
     private static function hyphenatedVersionRangeGenerator(): DataGenerator\StringGenerator
     {
-        return new Test\DataGenerator\Composer\VersionConstraintParsingGenerator(new Test\DataGenerator\Composer\HyphenatedVersionRangeGenerator());
+        return new VersionConstraint\Test\DataGenerator\Composer\VersionConstraintParsingGenerator(new VersionConstraint\Test\DataGenerator\Composer\HyphenatedVersionRangeGenerator());
     }
 }

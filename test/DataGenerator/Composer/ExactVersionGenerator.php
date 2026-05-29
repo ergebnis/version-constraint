@@ -14,15 +14,15 @@ declare(strict_types=1);
 namespace Ergebnis\VersionConstraint\Test\DataGenerator\Composer;
 
 use Ergebnis\DataGenerator;
-use Ergebnis\VersionConstraint\Test;
+use Ergebnis\VersionConstraint;
 
 final class ExactVersionGenerator implements DataGenerator\StringGenerator
 {
-    private readonly Test\DataGenerator\NumberGenerator $numberGenerator;
+    private readonly VersionConstraint\Test\DataGenerator\NumberGenerator $numberGenerator;
 
     public function __construct()
     {
-        $this->numberGenerator = new Test\DataGenerator\NumberGenerator();
+        $this->numberGenerator = new VersionConstraint\Test\DataGenerator\NumberGenerator();
     }
 
     public function generate(): \Generator

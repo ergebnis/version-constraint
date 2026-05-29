@@ -14,19 +14,19 @@ declare(strict_types=1);
 namespace Ergebnis\VersionConstraint\Test\DataGenerator\Composer;
 
 use Ergebnis\DataGenerator;
-use Ergebnis\VersionConstraint\Test;
+use Ergebnis\VersionConstraint;
 
 /**
  * @see https://getcomposer.org/doc/articles/versions.md#branches
  */
 final class VersionLikeBranchGenerator implements DataGenerator\StringGenerator
 {
-    private readonly Test\DataGenerator\NumberGenerator $numberGenerator;
+    private readonly VersionConstraint\Test\DataGenerator\NumberGenerator $numberGenerator;
     private readonly DataGenerator\StringGenerator $suffixGenerator;
 
     public function __construct()
     {
-        $this->numberGenerator = new Test\DataGenerator\NumberGenerator();
+        $this->numberGenerator = new VersionConstraint\Test\DataGenerator\NumberGenerator();
         $this->suffixGenerator = new DataGenerator\ConcatenatingValueGenerator(
             new DataGenerator\ValueGenerator('.'),
             new DataGenerator\ValueGenerator(

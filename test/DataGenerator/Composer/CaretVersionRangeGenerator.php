@@ -14,7 +14,7 @@ declare(strict_types=1);
 namespace Ergebnis\VersionConstraint\Test\DataGenerator\Composer;
 
 use Ergebnis\DataGenerator;
-use Ergebnis\VersionConstraint\Test;
+use Ergebnis\VersionConstraint;
 
 /**
  * @see https://getcomposer.org/doc/articles/versions.md#exact-version-constraint
@@ -27,7 +27,7 @@ final class CaretVersionRangeGenerator implements DataGenerator\StringGenerator
     {
         $this->generator = new DataGenerator\ConcatenatingValueGenerator(
             new DataGenerator\ValueGenerator('^'),
-            new Test\DataGenerator\Composer\ExactVersionConstraintGenerator(),
+            new VersionConstraint\Test\DataGenerator\Composer\ExactVersionConstraintGenerator(),
         );
     }
 

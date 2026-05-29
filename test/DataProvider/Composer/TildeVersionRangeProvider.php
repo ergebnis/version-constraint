@@ -14,7 +14,7 @@ declare(strict_types=1);
 namespace Ergebnis\VersionConstraint\Test\DataProvider\Composer;
 
 use Ergebnis\DataGenerator;
-use Ergebnis\VersionConstraint\Test;
+use Ergebnis\VersionConstraint;
 
 final class TildeVersionRangeProvider
 {
@@ -32,6 +32,6 @@ final class TildeVersionRangeProvider
 
     private static function tildeVersionRangeGenerator(): DataGenerator\StringGenerator
     {
-        return new Test\DataGenerator\Composer\VersionConstraintParsingGenerator(new Test\DataGenerator\Composer\TildeVersionRangeGenerator());
+        return new VersionConstraint\Test\DataGenerator\Composer\VersionConstraintParsingGenerator(new VersionConstraint\Test\DataGenerator\Composer\TildeVersionRangeGenerator());
     }
 }

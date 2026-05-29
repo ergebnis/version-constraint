@@ -13,6 +13,8 @@ declare(strict_types=1);
 
 namespace Ergebnis\VersionConstraint\Composer;
 
+use Ergebnis\VersionConstraint;
+
 final class TildeVersionRange
 {
     private const REGEX = <<<'PCRE'
@@ -50,12 +52,12 @@ PCRE;
     }
 
     /**
-     * @throws Exception\InvalidTildeVersionRange
+     * @throws VersionConstraint\Composer\Exception\InvalidTildeVersionRange
      */
     public static function fromString(string $value): self
     {
         if (1 !== \preg_match(self::REGEX, $value)) {
-            throw Exception\InvalidTildeVersionRange::fromString($value);
+            throw VersionConstraint\Composer\Exception\InvalidTildeVersionRange::fromString($value);
         }
 
         return new self($value);
