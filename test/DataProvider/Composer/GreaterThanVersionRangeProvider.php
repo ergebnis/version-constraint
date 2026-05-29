@@ -13,25 +13,25 @@ declare(strict_types=1);
 
 namespace Ergebnis\VersionConstraint\Test\DataProvider\Composer;
 
-use Ergebnis\DataGenerator;
 use Ergebnis\VersionConstraint;
 
-final class GreaterThanVersionRangeProvider
+final class GreaterThanVersionRangeProvider extends VersionConstraint\Test\DataProvider\Composer\AbstractDataProvider
 {
     /**
+     * @see https://getcomposer.org/doc/articles/versions.md#version-range
+     *
      * @return \Generator<string, array{0: string}>
      */
     public static function valid(): \Generator
     {
-        foreach (self::greaterThanVersionRangeGenerator()->generate() as $value) {
-            yield $value => [
-                $value,
-            ];
-        }
-    }
-
-    private static function greaterThanVersionRangeGenerator(): DataGenerator\StringGenerator
-    {
-        return new VersionConstraint\Test\DataGenerator\Composer\VersionConstraintParsingGenerator(new VersionConstraint\Test\DataGenerator\Composer\GreaterThanVersionRangeGenerator());
+        yield from self::provideValues([
+            'greater-than-major-one' => '>1',
+            'greater-than-major-one-minor' => '>1.2',
+            'greater-than-major-one-minor-patch' => '>1.2.3',
+            'greater-than-major-one-minor-patch-extra' => '>1.2.3.4',
+            'greater-than-major-zero' => '>0',
+            'greater-than-v-major-one' => '>v1',
+            'greater-than-v-major-one-minor-patch' => '>v1.2.3',
+        ]);
     }
 }
