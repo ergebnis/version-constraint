@@ -13,25 +13,27 @@ declare(strict_types=1);
 
 namespace Ergebnis\VersionConstraint\Test\DataProvider\Composer;
 
-use Ergebnis\DataGenerator;
 use Ergebnis\VersionConstraint;
 
-final class ExactVersionConstraintProvider
+final class ExactVersionConstraintProvider extends VersionConstraint\Test\DataProvider\Composer\AbstractDataProvider
 {
     /**
+     * @see https://getcomposer.org/doc/articles/versions.md#exact-version-constraint
+     *
      * @return \Generator<string, array{0: string}>
      */
     public static function valid(): \Generator
     {
-        foreach (self::exactVersionConstraintGenerator()->generate() as $value) {
-            yield $value => [
-                $value,
-            ];
-        }
-    }
-
-    private static function exactVersionConstraintGenerator(): DataGenerator\StringGenerator
-    {
-        return new VersionConstraint\Test\DataGenerator\Composer\VersionConstraintParsingGenerator(new VersionConstraint\Test\DataGenerator\Composer\ExactVersionConstraintGenerator());
+        yield from self::provideValues([
+            'exact-major-one' => '1',
+            'exact-major-one-minor' => '1.2',
+            'exact-major-one-minor-patch' => '1.2.3',
+            'exact-major-one-minor-patch-extra' => '1.2.3.4',
+            'exact-major-zero' => '0',
+            'exact-v-major-one' => 'v1',
+            'exact-v-major-one-minor' => 'v1.2',
+            'exact-v-major-one-minor-patch' => 'v1.2.3',
+            'exact-v-major-one-minor-patch-extra' => 'v1.2.3.4',
+        ]);
     }
 }

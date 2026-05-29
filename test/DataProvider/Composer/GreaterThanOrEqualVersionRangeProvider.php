@@ -13,25 +13,25 @@ declare(strict_types=1);
 
 namespace Ergebnis\VersionConstraint\Test\DataProvider\Composer;
 
-use Ergebnis\DataGenerator;
 use Ergebnis\VersionConstraint;
 
-final class GreaterThanOrEqualVersionRangeProvider
+final class GreaterThanOrEqualVersionRangeProvider extends VersionConstraint\Test\DataProvider\Composer\AbstractDataProvider
 {
     /**
+     * @see https://getcomposer.org/doc/articles/versions.md#version-range
+     *
      * @return \Generator<string, array{0: string}>
      */
     public static function valid(): \Generator
     {
-        foreach (self::greaterThanOrEqualVersionRangeGenerator()->generate() as $value) {
-            yield $value => [
-                $value,
-            ];
-        }
-    }
-
-    private static function greaterThanOrEqualVersionRangeGenerator(): DataGenerator\StringGenerator
-    {
-        return new VersionConstraint\Test\DataGenerator\Composer\VersionConstraintParsingGenerator(new VersionConstraint\Test\DataGenerator\Composer\GreaterThanOrEqualVersionRangeGenerator());
+        yield from self::provideValues([
+            'greater-than-or-equal-major-one' => '>=1',
+            'greater-than-or-equal-major-one-minor' => '>=1.2',
+            'greater-than-or-equal-major-one-minor-patch' => '>=1.2.3',
+            'greater-than-or-equal-major-one-minor-patch-extra' => '>=1.2.3.4',
+            'greater-than-or-equal-major-zero' => '>=0',
+            'greater-than-or-equal-v-major-one' => '>=v1',
+            'greater-than-or-equal-v-major-one-minor-patch' => '>=v1.2.3',
+        ]);
     }
 }
