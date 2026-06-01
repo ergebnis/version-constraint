@@ -41,4 +41,31 @@ abstract class AbstractDataProvider
             ];
         }
     }
+
+    /**
+     * @param array<string, string> $values
+     *
+     * @return \Generator<string, array{0: string}>
+     */
+    final protected static function provideInvalidValues(array $values): \Generator
+    {
+        $versionParser = new Semver\VersionParser();
+
+        foreach ($values as $key => $value) {
+            try {
+                $versionParser->parseConstraints($value);
+            } catch (\UnexpectedValueException $exception) {
+                yield $key => [
+                    $value,
+                ];
+
+                continue;
+            }
+
+            throw new \RuntimeException(\sprintf(
+                'Value "%s" appears to be valid according to composer/semver, but should be invalid.',
+                $value,
+            ));
+        }
+    }
 }

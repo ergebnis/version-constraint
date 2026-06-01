@@ -33,6 +33,7 @@ final class TildeVersionRangeTest extends Framework\TestCase
      * @dataProvider \Ergebnis\VersionConstraint\Test\DataProvider\Composer\HyphenatedVersionRangeProvider::valid
      * @dataProvider \Ergebnis\VersionConstraint\Test\DataProvider\Composer\LessThanOrEqualVersionRangeProvider::valid
      * @dataProvider \Ergebnis\VersionConstraint\Test\DataProvider\Composer\LessThanVersionRangeProvider::valid
+     * @dataProvider \Ergebnis\VersionConstraint\Test\DataProvider\Composer\TildeVersionRangeProvider::invalid
      * @dataProvider \Ergebnis\VersionConstraint\Test\DataProvider\Composer\WildCardVersionRangeProvider::valid
      */
     public function testFromStringRejectsInvalidValue(string $value): void

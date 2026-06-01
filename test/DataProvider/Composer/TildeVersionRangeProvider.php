@@ -30,6 +30,7 @@ final class TildeVersionRangeProvider extends VersionConstraint\Test\DataProvide
             'tilde-major-large-minor-zero' => '~201903.0',
             'tilde-major-large-minor-zero-stability-beta' => '~201903.0-beta',
             'tilde-major-large-minor-zero-stability-stable' => '~201903.0-stable',
+            'tilde-major-leading-zero-one' => '~01',
             'tilde-major-minor-uppercase-x-dev' => '~2.X-dev',
             'tilde-major-minor-x-dev' => '~2.x-dev',
             'tilde-major-minor-x-separator-dot-dev' => '~2.x.dev',
@@ -68,6 +69,16 @@ final class TildeVersionRangeProvider extends VersionConstraint\Test\DataProvide
             'tilde-v-major-one' => '~v1',
             'tilde-v-major-one-minor' => '~v1.2',
             'tilde-v-major-one-minor-stability-beta' => '~v1.2-beta',
+        ]);
+    }
+
+    /**
+     * @return \Generator<string, array{0: string}>
+     */
+    public static function invalid(): \Generator
+    {
+        yield from self::provideInvalidValues([
+            'tilde-major-minor-x-separator-underscore-dev' => '~2.x_dev',
         ]);
     }
 }
