@@ -47,7 +47,7 @@ v?
 $/xJ
 PCRE;
 
-    private function __construct(private readonly string $value)
+    private function __construct(private string $value)
     {
     }
 

@@ -21,7 +21,7 @@
     "security": "https://github.com/ergebnis/version-constraint/blob/main/.github/SECURITY.md"
   },
   "require": {
-    "php": "~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0 || ~8.5.0"
+    "php": "~8.0.0 || ~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0 || ~8.5.0"
   },
   "require-dev": {
     "composer/semver": "^3.4.4",
@@ -32,13 +32,12 @@
     "ergebnis/phpunit-slow-test-detector": "^2.24.0",
     "ergebnis/rector-rules": "^1.18.1",
     "fakerphp/faker": "^1.24.1",
-    "infection/infection": "~0.27.11",
     "phpstan/extension-installer": "^1.4.3",
     "phpstan/phpstan": "^2.1.55",
     "phpstan/phpstan-deprecation-rules": "^2.0.4",
     "phpstan/phpstan-phpunit": "^2.0.16",
     "phpstan/phpstan-strict-rules": "^2.0.11",
-    "phpunit/phpunit": "^10.5.62",
+    "phpunit/phpunit": "^9.6.34",
     "rector/rector": "^2.4.4"
   },
   "autoload": {
@@ -55,14 +54,13 @@
     "allow-plugins": {
       "composer/package-versions-deprecated": true,
       "ergebnis/composer-normalize": true,
-      "infection/extension-installer": true,
       "phpstan/extension-installer": true
     },
     "audit": {
       "abandoned": "report"
     },
     "platform": {
-      "php": "8.1.26"
+      "php": "8.0.30"
     },
     "preferred-install": "dist",
     "sort-packages": true
