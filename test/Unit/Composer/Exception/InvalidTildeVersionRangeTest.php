@@ -16,7 +16,9 @@ namespace Ergebnis\VersionConstraint\Test\Unit\Composer\Exception;
 use Ergebnis\VersionConstraint;
 use PHPUnit\Framework;
 
-#[Framework\Attributes\CoversClass(VersionConstraint\Composer\Exception\InvalidTildeVersionRange::class)]
+/**
+ * @covers \Ergebnis\VersionConstraint\Composer\Exception\InvalidTildeVersionRange
+ */
 final class InvalidTildeVersionRangeTest extends Framework\TestCase
 {
     use VersionConstraint\Test\Util\Helper;

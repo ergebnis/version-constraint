@@ -16,20 +16,25 @@ namespace Ergebnis\VersionConstraint\Test\Unit\Composer;
 use Ergebnis\VersionConstraint;
 use PHPUnit\Framework;
 
-#[Framework\Attributes\CoversClass(VersionConstraint\Composer\TildeVersionRange::class)]
-#[Framework\Attributes\UsesClass(VersionConstraint\Composer\Exception\InvalidTildeVersionRange::class)]
+/**
+ * @covers \Ergebnis\VersionConstraint\Composer\TildeVersionRange
+ *
+ * @uses \Ergebnis\VersionConstraint\Composer\Exception\InvalidTildeVersionRange
+ */
 final class TildeVersionRangeTest extends Framework\TestCase
 {
     use VersionConstraint\Test\Util\Helper;
 
-    #[Framework\Attributes\DataProviderExternal(VersionConstraint\Test\DataProvider\Composer\CaretVersionRangeProvider::class, 'valid')]
-    #[Framework\Attributes\DataProviderExternal(VersionConstraint\Test\DataProvider\Composer\ExactVersionConstraintProvider::class, 'valid')]
-    #[Framework\Attributes\DataProviderExternal(VersionConstraint\Test\DataProvider\Composer\GreaterThanOrEqualVersionRangeProvider::class, 'valid')]
-    #[Framework\Attributes\DataProviderExternal(VersionConstraint\Test\DataProvider\Composer\GreaterThanVersionRangeProvider::class, 'valid')]
-    #[Framework\Attributes\DataProviderExternal(VersionConstraint\Test\DataProvider\Composer\HyphenatedVersionRangeProvider::class, 'valid')]
-    #[Framework\Attributes\DataProviderExternal(VersionConstraint\Test\DataProvider\Composer\LessThanOrEqualVersionRangeProvider::class, 'valid')]
-    #[Framework\Attributes\DataProviderExternal(VersionConstraint\Test\DataProvider\Composer\LessThanVersionRangeProvider::class, 'valid')]
-    #[Framework\Attributes\DataProviderExternal(VersionConstraint\Test\DataProvider\Composer\WildCardVersionRangeProvider::class, 'valid')]
+    /**
+     * @dataProvider \Ergebnis\VersionConstraint\Test\DataProvider\Composer\CaretVersionRangeProvider::valid
+     * @dataProvider \Ergebnis\VersionConstraint\Test\DataProvider\Composer\ExactVersionConstraintProvider::valid
+     * @dataProvider \Ergebnis\VersionConstraint\Test\DataProvider\Composer\GreaterThanOrEqualVersionRangeProvider::valid
+     * @dataProvider \Ergebnis\VersionConstraint\Test\DataProvider\Composer\GreaterThanVersionRangeProvider::valid
+     * @dataProvider \Ergebnis\VersionConstraint\Test\DataProvider\Composer\HyphenatedVersionRangeProvider::valid
+     * @dataProvider \Ergebnis\VersionConstraint\Test\DataProvider\Composer\LessThanOrEqualVersionRangeProvider::valid
+     * @dataProvider \Ergebnis\VersionConstraint\Test\DataProvider\Composer\LessThanVersionRangeProvider::valid
+     * @dataProvider \Ergebnis\VersionConstraint\Test\DataProvider\Composer\WildCardVersionRangeProvider::valid
+     */
     public function testFromStringRejectsInvalidValue(string $value): void
     {
         $this->expectException(VersionConstraint\Composer\Exception\InvalidTildeVersionRange::class);
@@ -37,7 +42,9 @@ final class TildeVersionRangeTest extends Framework\TestCase
         VersionConstraint\Composer\TildeVersionRange::fromString($value);
     }
 
-    #[Framework\Attributes\DataProviderExternal(VersionConstraint\Test\DataProvider\Composer\TildeVersionRangeProvider::class, 'valid')]
+    /**
+     * @dataProvider \Ergebnis\VersionConstraint\Test\DataProvider\Composer\TildeVersionRangeProvider::valid
+     */
     public function testFromStringReturnsTildeVersionRange(string $value): void
     {
         $versionConstraint = VersionConstraint\Composer\TildeVersionRange::fromString($value);
