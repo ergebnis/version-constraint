@@ -46,9 +46,11 @@ v?
 )
 $/xJ
 PCRE;
+    private string $value;
 
-    private function __construct(private string $value)
+    private function __construct(string $value)
     {
+        $this->value = $value;
     }
 
     /**
