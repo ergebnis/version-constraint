@@ -26,22 +26,22 @@ v?
 (
     # classic version with up to four parts
     (
-        (0|[1-9]\d*)(\.(0|[1-9]\d*)){0,3}
+        \d+(\.\d+){0,3}
     ) |
 
     # classic version with up to four parts, optional separator, and stability flag
     (
-        (0|[1-9]\d*)(\.(0|[1-9]\d*)){0,3}[-._]?(a|alpha|b|beta|dev|p|patch|pl|rc|RC|stable)
+        \d+(\.\d+){0,3}[-._]?(a|alpha|b|beta|dev|p|patch|pl|rc|RC|stable)
     ) |
 
     # classic version with up to four parts, optional separator, stability flag (except "dev"), optional separator, and build number
     (
-        (0|[1-9]\d*)(\.(0|[1-9]\d*)){0,3}[-._]?(a|alpha|b|beta|p|patch|pl|rc|RC|stable)[.-]?\d+
+        \d+(\.\d+){0,3}[-._]?(a|alpha|b|beta|p|patch|pl|rc|RC|stable)[.-]?\d+
     ) |
 
     # version-like branch
     (
-        (0|[1-9]\d*)(\.(0|[1-9]\d*)){0,2}\.[xX][-._]?dev
+        \d+(\.\d+){0,2}\.[xX][-.]?dev
     )
 )
 $/xJ
