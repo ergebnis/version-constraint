@@ -24,27 +24,22 @@ final class TildeVersionRange
 v?
 
 (
-    # classic version with up to four parts
+    # classic version with up to four parts, an optional stability flag with optional build
+    # numbers, and an optional dev flag
     (
-        \d+(\.\d+){0,3}
+        \d+(\.\d+){0,3}[._-]?((stable|beta|b|RC|alpha|a|patch|pl|p)((?:[.-]?\d+)*)?)?([.-]?dev)?
     ) |
 
-    # classic version with up to four parts, optional separator, and stability flag
+    # version-like branch with up to three parts before a wildcard
     (
-        \d+(\.\d+){0,3}[-._]?(a|alpha|b|beta|dev|p|patch|pl|rc|RC|stable)
-    ) |
-
-    # classic version with up to four parts, optional separator, stability flag (except "dev"), optional separator, and build number
-    (
-        \d+(\.\d+){0,3}[-._]?(a|alpha|b|beta|p|patch|pl|rc|RC|stable)[.-]?\d+
-    ) |
-
-    # version-like branch
-    (
-        \d+(\.\d+){0,2}\.[xX][-.]?dev
+        \d+(\.\d+){0,2}\.[xX*][.-]?dev
     )
 )
-$/xJ
+
+# optional build metadata
+(\+\S+)?
+
+$/ixJ
 PCRE;
     private string $value;
 
