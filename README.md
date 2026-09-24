@@ -1,9 +1,9 @@
 # version-constraint
 
-[![Integrate](https://github.com/ergebnis/version-constraint/workflows/Integrate/badge.svg)](https://github.com/ergebnis/version-constraint/actions)
-[![Merge](https://github.com/ergebnis/version-constraint/workflows/Merge/badge.svg)](https://github.com/ergebnis/version-constraint/actions)
-[![Release](https://github.com/ergebnis/version-constraint/workflows/Release/badge.svg)](https://github.com/ergebnis/version-constraint/actions)
-[![Renew](https://github.com/ergebnis/version-constraint/workflows/Renew/badge.svg)](https://github.com/ergebnis/version-constraint/actions)
+[![Integrate](https://github.com/ergebnis/version-constraint/actions/workflows/integrate.yaml/badge.svg?branch=main)](https://github.com/ergebnis/version-constraint/actions/workflows/integrate.yaml)
+[![Merge](https://github.com/ergebnis/version-constraint/actions/workflows/merge.yaml/badge.svg)](https://github.com/ergebnis/version-constraint/actions/workflows/merge.yaml)
+[![Release](https://github.com/ergebnis/version-constraint/actions/workflows/release.yaml/badge.svg)](https://github.com/ergebnis/version-constraint/actions/workflows/release.yaml)
+[![Renew](https://github.com/ergebnis/version-constraint/actions/workflows/renew.yaml/badge.svg)](https://github.com/ergebnis/version-constraint/actions/workflows/renew.yaml)
 
 [![Code Coverage](https://codecov.io/gh/ergebnis/version-constraint/branch/main/graph/badge.svg)](https://codecov.io/gh/ergebnis/version-constraint)
 [![Type Coverage](https://shepherd.dev/github/ergebnis/version-constraint/coverage.svg)](https://shepherd.dev/github/ergebnis/version-constraint)
