@@ -10,7 +10,7 @@
 
 [![Latest Stable Version](https://poser.pugx.org/ergebnis/version-constraint/v/stable)](https://packagist.org/packages/ergebnis/version-constraint)
 [![Total Downloads](https://poser.pugx.org/ergebnis/version-constraint/downloads)](https://packagist.org/packages/ergebnis/version-constraint)
-[![Monthly Downloads](http://poser.pugx.org/ergebnis/version-constraint/d/monthly)](https://packagist.org/packages/ergebnis/version-constraint)
+[![Monthly Downloads](https://poser.pugx.org/ergebnis/version-constraint/d/monthly)](https://packagist.org/packages/ergebnis/version-constraint)
 
 This project provides a [`composer`](https://getcomposer.org) package with abstractions of version constraints.
 
