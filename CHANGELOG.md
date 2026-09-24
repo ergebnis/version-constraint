@@ -14,6 +14,6 @@ For a full diff see [`dc5f5d1...main`][dc5f5d1...main].
 
 [dc5f5d1...main]: https://github.com/ergebnis/version-constraint/compare/dc5f5d1...main
 
-[#1]: https://github.com/ergebnis/version-constraint/pull/2
+[#2]: https://github.com/ergebnis/version-constraint/pull/2
 
 [@localheinz]: https://github.com/localheinz
