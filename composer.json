@@ -24,7 +24,7 @@
     "php": "~7.4.0 || ~8.0.0 || ~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0 || ~8.5.0 || ~8.6.0"
   },
   "require-dev": {
-    "composer/semver": "^3.4.4",
+    "composer/semver": "^3.5.0",
     "ergebnis/composer-normalize": "^2.53.0",
     "ergebnis/license": "^2.8.0",
     "ergebnis/php-cs-fixer-config": "^6.63.3",
