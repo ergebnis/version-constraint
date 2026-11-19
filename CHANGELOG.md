@@ -11,6 +11,7 @@ For a full diff see [`dc5f5d1...main`][dc5f5d1...main].
 ### Added
 
 - Added `Composer\TildeVersionRange` as a value object ([#2]), by [@localheinz]
+- Added support for PHP 8.6 ([#488]), by [@localheinz]
 
 ### Changed
 
@@ -20,5 +21,6 @@ For a full diff see [`dc5f5d1...main`][dc5f5d1...main].
 
 [#2]: https://github.com/ergebnis/version-constraint/pull/2
 [#435]: https://github.com/ergebnis/version-constraint/pull/435
+[#488]: https://github.com/ergebnis/version-constraint/pull/488
 
 [@localheinz]: https://github.com/localheinz
