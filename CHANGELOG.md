@@ -16,11 +16,13 @@ For a full diff see [`dc5f5d1...main`][dc5f5d1...main].
 ### Changed
 
 - Allowed installation on PHP 8.6 ([#435]), by [@localheinz]
+- Allowed installation on PHP 8.7 ([#493]), by [@localheinz]
 
 [dc5f5d1...main]: https://github.com/ergebnis/version-constraint/compare/dc5f5d1...main
 
 [#2]: https://github.com/ergebnis/version-constraint/pull/2
 [#435]: https://github.com/ergebnis/version-constraint/pull/435
 [#488]: https://github.com/ergebnis/version-constraint/pull/488
+[#493]: https://github.com/ergebnis/version-constraint/pull/493
 
 [@localheinz]: https://github.com/localheinz
