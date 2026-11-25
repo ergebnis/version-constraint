@@ -18,34 +18,34 @@ use Ergebnis\VersionConstraint;
 final class TildeVersionRange
 {
     private const REGEX = <<<'PCRE'
-/^
-~
+        /^
+        ~
 
-v?
+        v?
 
-(
-    # classic version with up to four parts
-    (
-        \d+(\.\d+){0,3}
-    ) |
+        (
+            # classic version with up to four parts
+            (
+                \d+(\.\d+){0,3}
+            ) |
 
-    # classic version with up to four parts, optional separator, and stability flag
-    (
-        \d+(\.\d+){0,3}[-._]?(a|alpha|b|beta|dev|p|patch|pl|rc|RC|stable)
-    ) |
+            # classic version with up to four parts, optional separator, and stability flag
+            (
+                \d+(\.\d+){0,3}[-._]?(a|alpha|b|beta|dev|p|patch|pl|rc|RC|stable)
+            ) |
 
-    # classic version with up to four parts, optional separator, stability flag (except "dev"), optional separator, and build number
-    (
-        \d+(\.\d+){0,3}[-._]?(a|alpha|b|beta|p|patch|pl|rc|RC|stable)[.-]?\d+
-    ) |
+            # classic version with up to four parts, optional separator, stability flag (except "dev"), optional separator, and build number
+            (
+                \d+(\.\d+){0,3}[-._]?(a|alpha|b|beta|p|patch|pl|rc|RC|stable)[.-]?\d+
+            ) |
 
-    # version-like branch
-    (
-        \d+(\.\d+){0,2}\.[xX][-.]?dev
-    )
-)
-$/xJ
-PCRE;
+            # version-like branch
+            (
+                \d+(\.\d+){0,2}\.[xX][-.]?dev
+            )
+        )
+        $/xJ
+        PCRE;
     private string $value;
 
     private function __construct(string $value)
